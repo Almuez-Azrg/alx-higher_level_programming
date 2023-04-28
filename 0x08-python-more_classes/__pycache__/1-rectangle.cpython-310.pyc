@@ -1,0 +1,55 @@
+o
+
+    
+¸cج  م                   @   s6   d Z G dd„ dƒZedkrddlZejddچ dS dS )aH  
+This module contains a class Rectangle
+
+>>> Rectangle = __import__('1-rectangle').Rectangle
+
+>>> my_rectangle = Rectangle(2, 4)
+>>> print(type(my_rectangle))
+<class '1-rectangle.Rectangle'>
+
+>>> dict_result = my_rectangle.__dict__
+>>> print(dict(sorted(dict_result.items())))
+{'_Rectangle__height': 4, '_Rectangle__width': 2}
+
+c                   @   sL   e Zd ZdZdd„ Zedd„ ƒZejdd„ ƒZedd„ ƒZejd	d„ ƒZd
+S )ع	RectanglezCThis is an class Rectangle with instance attribute heigth and widthc                 C   s   || _ || _dS )aے  
+        initializes height and width of the rectangle 
+        upon creation of an instance using property
+        getters and setters
+
+        >>> my_rectangle = Rectangle(2, '4')
+        Traceback (most recent call last):
+            ...
+        TypeError: height must be an integer
+
+
+        >>> my_rectangle = Rectangle(0, 0)
+        >>> my_rectangle.width = 10
+        >>> my_rectangle.height = -3
+        Traceback (most recent call last):
+            ...
+        ValueError: height must be >= 0
+        N)عwidthعheight)عselfr   r   © r   ْ7/home/amani/Projects/classes_and_objects/1-rectangle.pyع__init__   s   
+zRectangle.__init__c                 C   َ   | j S )zProperty getter for the width)ع_Rectangle__width©r   r   r   r   r   ,   َ   zRectangle.widthc                 C   َ.   t |ƒtur
+tdƒ‚|dk rtdƒ‚|| _dS )z¦
+        Property setter for the width
+        checks if the type for the width is an integer or < 0
+        if above conditions aren't met errors are raised
+        zwidth must be an integeré    zwidth must be >= 0N)عtypeعintع	TypeErrorع
+ValueErrorr	   )r   r   r   r   r   r   1   َ
+   
+c                 C   r   )zProperty getter for the height)ع_Rectangle__heightr
+   r   r   r   r   >   r   zRectangle.heightc                 C   r   )z¨
+        Property setter for the height
+        checks if the type for the height is an integer or < 0
+        if above conditions aren't met errors are raised
+        zheight must be an integerr
+   zheight must be >= 0N)r   r   r   r   r   )r   r   r   r   r   r   C   r   N)	ع__name__ع
+__module__ع__qualname__ع__doc__r   عpropertyr   عsetterr   r   r   r   r   r      s    
+
+
+r   ع__main__r
+   NT)عverbose)r   r   r   عdoctestعtestmodr   r   r   r   ع<module>   s   >‏
